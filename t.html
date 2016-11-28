@@ -7,6 +7,7 @@ div img{
 	width: 200px;
 	height: 200px;	
 }
+
 div{
 	display: inline-block;
 	padding: 50px;
@@ -22,9 +23,20 @@ html{
 </head>
 <body>
 	<center>
-		<div><b>One Page</b><br><a href="one_page/index.html"><img src="one.png"></a></div>
-		<div><b>E-Commerce</b><br><a href="ecommerce/index.html"><img src="like.png"></a></div>
-		<div><b>Blog</b><br><a href="blog/index.html"><img src="bl.png"></a></div>
+		<div><b>One Page</b><br><a href="one_page/index.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="one.png"></a></div>
+		<div><b>E-Commerce</b><br><a href="ecommerce/index.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="like.png"></a></div>
+		<div><b>Blog</b><br><a href="blog/index.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="bl.png"></a></div>
 	</center>
+	<script>
+function bigImg(x) {
+    x.style.height = "250px";
+    x.style.width = "250px";
+}
+
+function normalImg(x) {
+    x.style.height = "200px";
+    x.style.width = "200px";
+}
+</script>
 </body>
 </html>
